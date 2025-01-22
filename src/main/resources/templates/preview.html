@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClickClack PDF</title>
+    <link rel="stylesheet" th:href="@{/css/preview.css}"/>
+    <link rel="shortcut icon" th:href="@{/img/cinzaF.png}" type="image/x-icon">
+</head>
+<body>
+<div class="main-container">
+    <h1>ClickClack</h1>
+
+    <div class="container">
+        <div id="form">
+            <div class="form-group">
+                <label class="textolabel" id="main">Aqui está o seu PDF:</label>
+                <div class="textolabel form-group inline-block">
+                    <p id="nomeArquivo" class="pdfResult"><span th:text="${filename}"></span></p>
+                </div>
+                <embed class="pdf" th:src="@{'/media?filename=' + ${filename}}" type="application/pdf"/>
+
+                <!-- Corrected th:href to pass the filename as a parameter -->
+                <a class="btn" th:href="@{'/media?filename=' + ${filename}}" target="_blank">Baixar PDF</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

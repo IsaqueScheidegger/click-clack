@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    font-family: "Inter", serif;
+    background-color: #f2f6fa;
+    justify-content: center;
+    align-items: center;
+}
+
+label:not(#main){
+    font-size: 1.25em;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    padding: 20px;          
+    gap: 15px;              
+    min-height: 100vh;      
+    box-sizing: border-box; 
+}
+
+.container {
+    position: relative; 
+    margin: 15px auto 0;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100vh;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 4em;
+    margin: 15px;
+}
+
+.textolabel#main{
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.textolabel#main:hover{
+    color: #000;
+}
+
+.textarea {
+    font-family: "Inter", serif;
+    width: 90%;
+    height: 150px;
+    border: 2px solid #CACACA60;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 0;
+    resize: none;
+    background-color: #f0f0f0;
+}
+
+
+.textarea:focus,
+.input:focus, #footerNote:focus {
+    outline: 2px solid #000000b4;     
+    border: none;
+}
+
+#centerTitle{
+    font-size: 2em;
+}
+
+.footNote-text, #centerTitle, .inline-block, #alinhamento-texto-label, #alinhamento-titulo-label {
+    color: #000;
+    text-align: center;
+    display: inline-grid; 
+}
+
+.input-container{
+    margin: 15px;
+    position: relative;
+}
+
+.input-wrapper{
+    position: absolute;
+}
+
+#toggleOptions {
+    background: none;
+    border: none;
+    display: block;
+    font-size: 1.5em;
+    color: #00a8e8;
+    text-decoration: none;
+    margin: 45px auto 45px auto;
+    cursor: pointer;
+}
+
+#toggleOptions:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    background-color: #00bce8;
+    width: 90%;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 120%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #027f9b;
+}
+
+#moreOptions {
+    color: #44C0E3;
+}
+
+#moreOptions:hover{
+    text-decoration: underline;
+}
+
+    input[type="number"] {
+        outline: none;
+        border: 2px solid #CACACA60;
+        text-align: center;
+        display: grid;
+        resize: none;
+        width: 33%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        font-size: 1.25em;
+        font-family: 'Inter', serif;
+        display: block;
+        background-color: #cacaca50;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease;
+    }
+
+    select {
+        outline: none;
+        border: 2px solid #CACACA60;
+        text-align: center;
+        display: block;
+        padding: 12px;
+        margin: 0px;
+        border-radius: 10px;
+        font-size: 120%;
+        font-family: 'Inter', serif;
+        background-color: #cacaca50;
+        color: #333;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease;
+        width: 100%;
+    }
+    
+    select option {
+        border-radius: 20px 0px 20px 0px;
+        margin:0;
+        background-color: #fff;
+        color: #b2b2b2;
+        padding: 8px;
+        font-size: 100%;
+    }
+    
+    select option:checked {
+        background-color: #f0f0f0;
+        color: #000;
+    }
+
+    select:focus {
+        outline: none;
+    }
+
+    .grid-container.text {
+        margin: 45px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    button {
+        background: none;
+        cursor: pointer;
+        padding: 10px 15px;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        transition: background-color 0.3s;
+    }
+
+    #advancedOptions {
+        display: none; 
+        margin-top: 15px;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    #advancedOptions.visible {
+            display: block;
+            opacity: 1;
+        }
+
+    .gridContent{
+        justify-content: flex-end;
+    }
+
+    .grid-container.number {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+    
+    .grid-container div {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .grid-container input {
+        width: 100%;
+    }
+
+    .input-wrapper {
+        position: relative;
+        width: 100%;
+    }
+
+    .input-wrapper input, #fileName {
+        resize: none;
+        width: 60vh;
+        height: 35px;
+        line-height: 35px;
+        border: 2px solid #cacaca50;
+        border-radius: 10px;
+        background-color: #f0f0f0;
+        font-size: 1.25em;
+        text-align: center;
+        font-family: "Inter", serif;
+    }
+
+    .clear-icon {
+        position: absolute;
+        right: 21.5%;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+    
+    .clear-icon:hover {
+        opacity: 0.7;
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 3em;
+        }
+        
+        .container {
+            width: 100%;
+            padding: 15px;
+        }
+        
+        .textarea, .input-wrapper input, #fileName {
+            width: 80%;
+            font-size: 1em;
+        }
+    
+        .btn {
+            font-size: 1em;
+        }
+    
+        .grid-container.text {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+    
+        input[type="number"], select {
+            width: 100%;
+        }
+    
+        label:not(#main) {
+            font-size: 1em;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 2.5em;
+        }
+    
+        .textarea {
+            height: 100px;
+        }
+    
+        .btn {
+            padding: 8px 15px;
+            font-size: 0.9em;
+        }
+    }
