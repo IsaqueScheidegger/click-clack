@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@font-face {
+    font-family: 'JMHTypewriter-Regular';
+    src: url('fonts/JMHTypewriter-Regular.ttf') format('truetype');
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    font-family: "Inter", serif;
+    background-color: #f2f6fa;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+label:not(#main){
+    font-size: 1.25em;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 15px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    margin: 15px auto 0;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100vh;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 4em;
+    margin: 15px;
+}
+
+label {
+    font-size: 1.25em;
+}
+
+.textolabel#main {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.pdf {
+    margin: 0;
+    font-family: "JMHTypewriter-Regular", serif;
+    width: 80vh;
+    height: 70vh;
+    border: 2px solid #CACACA60;
+    border-radius: 10px;
+    padding: 0px;
+    font-size: 16px;
+    resize: none;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+#nomeArquivo {
+    display: inline-block;
+    resize: none;
+    height: 35px;
+    line-height: 35px;
+    padding: 2px 5px;
+    border: 2px solid #cacaca50;
+    color: #b2b2b2;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    font-size: 1.5em;
+    margin: 0 0 15px;
+    text-align: center;
+    font-family: "Inter", serif;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #00bce8;
+    width: 90%;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 45px 0 0 0;
+    font-size: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background-color: #027f9b;
+}
+
+@media (max-width: 768px) {
+    #pdf-embed {
+        height: 400px;
+    }
+}

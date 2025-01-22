@@ -1,0 +1,14 @@
+C:\dev\clickclack\src\main\java\com\clickclack\config\AppConfig.java
+C:\dev\clickclack\src\main\java\com\clickclack\controller\FileController.java
+C:\dev\clickclack\src\main\java\com\clickclack\controller\PdfController.java
+C:\dev\clickclack\src\main\java\com\clickclack\dtos\PdfParameters.java
+C:\dev\clickclack\src\main\java\com\clickclack\exception\ApiError.java
+C:\dev\clickclack\src\main\java\com\clickclack\exception\BadRequestException.java
+C:\dev\clickclack\src\main\java\com\clickclack\exception\GlobalExceptionHandler.java
+C:\dev\clickclack\src\main\java\com\clickclack\exception\ResourceNotFoundException.java
+C:\dev\clickclack\src\main\java\com\clickclack\LoveCraftApplication.java
+C:\dev\clickclack\src\main\java\com\clickclack\utils\ErrorTracker.java
+C:\dev\clickclack\src\main\java\com\clickclack\utils\FontManager.java
+C:\dev\clickclack\src\main\java\com\clickclack\utils\PdfContent.java
+C:\dev\clickclack\src\main\java\com\clickclack\utils\PdfService.java
+C:\dev\clickclack\src\main\java\com\clickclack\utils\QRCodeGenerator.java

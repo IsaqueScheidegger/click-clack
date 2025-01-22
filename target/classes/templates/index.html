@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClickClack PDF</title>
+    <link rel="shortcut icon" th:href="@{/img/cinzaF.png}" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon@4.7.0/css/flaticon.min.css">
+    <link rel="stylesheet" th:href="@{/css/styles.css}"/>
+</head>
+<body>
+<div class="main-container">
+    <h1>ClickClack</h1>
+
+    <div class="container">
+        <form action="/pdf/generate" method="post">
+            <div class="form-group">
+                <label class="textolabel" id="main" for="userText">Digite seu texto:</label>
+                <textarea id="userText" name="userText" class="textarea" oninput="autoResize(this)"></textarea>
+            </div>
+            <div class="textolabel form-group inline-block">
+                <label for="fileName">Digite o nome do arquivo:</label>
+                <input type="text" id="fileName" name="fileName" class="input" placeholder="NomeDoArquivo" required>
+            </div>
+
+            <div class="grid-container text">
+                <div class="gridContent">
+                    <label id="alinhamento-texto-label" for="alignText">Alinhamento do Texto:</label>
+                    <select id="alignText" name="alignText">
+                        <option value="left">Esquerda</option>
+                        <option value="right">Direita</option>
+                        <option value="center">Centro</option>
+                        <option value="justify">Justificado</option>
+                    </select>
+                </div>
+                <div class="gridContent">
+                    <label id="alinhamento-titulo-label" for="alignTitle">Alinhamento do Título:</label>
+                    <select id="alignTitle" name="alignTitle">
+                        <option value="left">Esquerda</option>
+                        <option value="center">Centro</option>
+                        <option value="right">Direita</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="button" id="toggleOptions">
+                <span id="moreOptions">Mais opções</span>
+            </button>
+            <div id="advancedOptions" style="display: none; margin-top: 15px;">
+                <div class="form-group grid-container number">
+                    <div class="gridContent">
+                        <label for="fontSize">Tamanho da fonte:</label>
+                        <input type="number" id="fontSize" name="fontSize" value="12" step="1" min="8" max="36">
+                    </div>
+                    <div class="gridContent">
+                        <label for="characterSpacing">Espaçamento entre caracteres:</label>
+                        <input type="number" id="characterSpacing" name="characterSpacing" value="0.5" step="0.1" min="0" max="5">
+                    </div>
+
+                    <div class="gridContent">
+                        <label for="lineSpacing">Espaçamento entre linhas:</label>
+                        <input type="number" id="lineSpacing" name="lineSpacing" value="0.5" step="0.1" min="0" max="5">
+                    </div>
+                </div>
+
+                <div class="input-container">
+                    <label for="footerNote" class="footNote-text">Nota de rodapé:</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="footerNote" name="footerNote" placeholder="*Seu Nome* 00/00/00">
+                        <img class="clear-icon" th:src="@{/img/cross-small.png}" alt="Limpar" width="20" height="20" onclick="clearInput('footerNote')">
+                    </div>
+                </div>
+
+                <div class="input-container">
+                    <label for="qrCodeLink" class="footNote-text">Link para QR Code:</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="qrCodeLink" name="qrCodeLink" placeholder="https://www.youtube.com/">
+                        <img class="clear-icon" th:src="@{/img/cross-small.png}" alt="Limpar" width="20" height="20" onclick="clearInput('QrCode')">
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function autoResize(textarea) {
+        textarea.style.height = 'auto';
+        textarea.style.height = textarea.scrollHeight + 'px';
+    }
+
+    function clearInput(inputId) {
+        document.getElementById(inputId).value = '';
+    }
+
+    const toggleButton = document.getElementById('toggleOptions');
+    const advancedOptionsContainer = document.getElementById('advancedOptions');
+
+    toggleButton.addEventListener('click', function () {
+        if (advancedOptionsContainer.style.display === 'none' || advancedOptionsContainer.style.display === '') {
+            advancedOptionsContainer.style.display = 'block';
+        } else {
+            advancedOptionsContainer.style.display = 'none';
+        }
+    });
+</script>
+</body>
+</html>

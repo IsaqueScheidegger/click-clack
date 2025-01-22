@@ -1,0 +1,14 @@
+com\clickclack\utils\FontManager.class
+com\clickclack\controller\FileController.class
+com\clickclack\controller\PdfController.class
+com\clickclack\exception\ResourceNotFoundException.class
+com\clickclack\utils\ErrorTracker.class
+com\clickclack\utils\PdfContent.class
+com\clickclack\exception\GlobalExceptionHandler.class
+com\clickclack\LoveCraftApplication.class
+com\clickclack\config\AppConfig.class
+com\clickclack\exception\BadRequestException.class
+com\clickclack\utils\PdfService.class
+com\clickclack\exception\ApiError.class
+com\clickclack\utils\QRCodeGenerator.class
+com\clickclack\dtos\PdfParameters.class
