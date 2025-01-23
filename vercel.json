@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "pom.xml",
-      "use": "@vercel/java"
+      "src": "Dockerfile",
+      "use": "@vercel/docker"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "target/clickclack-0.0.1-SNAPSHOT.jar"
+      "dest": "/app"
     }
   ]
 }
