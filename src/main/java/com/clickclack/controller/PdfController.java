@@ -19,7 +19,7 @@ import java.nio.file.Path;
 @RequestMapping("/pdf")
 public class PdfController {
 
-    private static final String MEDIA_DIRECTORY = "src/main/resources/pdf/";
+    private static final String MEDIA_DIRECTORY = "opt/app/uploads/pdfs/";
 
     private final ErrorTracker errorTracker;
 

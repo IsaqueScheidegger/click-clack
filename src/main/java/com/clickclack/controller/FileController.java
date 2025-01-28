@@ -19,7 +19,7 @@ public class FileController {
     @GetMapping
     public ResponseEntity<Resource> getFile(@RequestParam String filename) {
         try {
-            Path file = Path.of("src/main/resources/pdf/" + filename).toAbsolutePath();
+            Path file = Path.of("opt/app/uploads/pdfs/" + filename).toAbsolutePath();
             Resource resource = new UrlResource(file.toUri());
 
             if (resource.exists() || resource.isReadable()) {
